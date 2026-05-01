@@ -61,14 +61,13 @@ def weather_by_params():
 
 def get_weather(lat, lon, city_name):
     params = {
-        'latitude': lat,
-        'longitude': lon,
-        'current': 'temperature_2m,weather_code,wind_speed_10m,humidity_2m',
-        'daily': 'temperature_2m_max,temperature_2m_min,precipitation_sum,weather_code',
-        'timezone': 'auto',
-        'forecast_days': 7
-    }
-    
+    'latitude': lat,
+    'longitude': lon,
+    'current': 'temperature_2m,weather_code,wind_speed_10m,relative_humidity_2m',
+    'daily': 'temperature_2m_max,temperature_2m_min,precipitation_sum,weather_code',
+    'timezone': 'auto',
+    'forecast_days': 7
+}
     try:
         response = requests.get(OPEN_METEO_URL, params=params)
         data = response.json()
