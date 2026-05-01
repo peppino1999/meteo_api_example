@@ -125,4 +125,4 @@ jobs:
       - name: Deploy to production
         run: |
           echo "Deploying image ${{ steps.meta.outputs.tags }} to production"
-          docker run -d -p 5000:5000 ${{ steps.meta.outputs.tags }}
+          docker run -d -p 5000:5000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
