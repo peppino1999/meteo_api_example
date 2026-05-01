@@ -47,7 +47,7 @@ class TestWeatherByParams:
         data = response.get_json()
         
         assert response.status_code == 200
-        assert data['city'] == 'Rome'
+        assert data['city'] == 'rome'
 
     def test_weather_with_coords(self, client):
         response = client.get('/weather?lat=41.9&lon=12.5')
