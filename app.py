@@ -83,7 +83,7 @@ def get_weather(lat, lon, city_name):
                 'temperature': current.get('temperature_2m'),
                 'weather_code': current.get('weather_code'),
                 'wind_speed': current.get('wind_speed_10m'),
-                'humidity': current.get('humidity_2m')
+                'humidity': current.get('relative_humidity_2m')
             },
             'daily': [
                 {
